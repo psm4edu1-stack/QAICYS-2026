@@ -1,0 +1,463 @@
+/* =========================================================
+   QAICYS 2026
+   RULE BOOK PAGE
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        linear-gradient(
+            rgba(3, 6, 23, 0.85),
+            rgba(5, 10, 35, 0.85)
+        ),
+        url("../assets/images/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #ffffff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* =========================================================
+   MAIN PAGE
+========================================================= */
+
+.rulebook-page {
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+    padding: 35px 50px 60px;
+    background: transparent;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.rulebook-hero {
+    text-align: center;
+    padding: 20px 0 50px !important;
+    margin: 0 !important;
+}
+
+.rulebook-logo {
+    display: block;
+    width: 250px !important;
+    height: auto;
+    margin: 0 auto 12px !important;
+}
+
+.rulebook-brand {
+    margin-bottom: 12px;
+    color: #00f6ff;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+}
+
+.rulebook-hero h1 {
+    color: #f5f7ff;
+    font-size: clamp(44px, 5.5vw, 76px);
+    font-weight: 900;
+    letter-spacing: 5px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.hero-line {
+    width: 100px;
+    height: 2px;
+    margin: 22px auto 16px;
+    background: linear-gradient(90deg, #00f6ff, #8e2cff);
+    box-shadow: 0 0 10px rgba(0, 246, 255, 0.35);
+}
+
+.rulebook-intro {
+    color: #8295bc;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+/* =========================================================
+   GUIDELINES SECTION
+========================================================= */
+
+.guidelines-section {
+    width: 100%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.guidelines-header {
+    margin-bottom: 28px;
+}
+
+.section-label {
+    margin-bottom: 10px;
+    color: #00f6ff;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+
+.guidelines-header h2 {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.guidelines-subtitle {
+    margin-top: 10px;
+    color: #8fa0c1;
+    font-size: 15.5px;
+    line-height: 1.7;
+}
+
+.guidelines-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.guideline-card {
+    position: relative;
+    min-height: 105px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 26px;
+    background: linear-gradient(135deg, rgba(6, 18, 36, 0.85), rgba(8, 16, 35, 0.90));
+    border-left: 3px solid #00f6ff;
+    border-radius: 0 10px 10px 0;
+    backdrop-filter: blur(8px);
+    transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.guideline-card:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, rgba(0, 246, 255, 0.08), rgba(142, 44, 255, 0.08));
+    box-shadow: 0 0 20px rgba(0, 246, 255, 0.08);
+}
+
+.guideline-number {
+    flex-shrink: 0;
+    color: #00f6ff;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.guideline-card p {
+    color: #ffffff;
+    font-size: 15.5px;
+    line-height: 1.65;
+}
+
+/* =========================================================
+   DOWNLOAD SECTION
+========================================================= */
+
+.rulebook-download-section {
+    position: relative;
+    width: 100%;
+    margin-top: 45px;
+    padding: 1.5px;
+    border-radius: 16px;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.rotating-glow-box::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        from 0deg,
+        transparent 0%,
+        #00f0ff 22%,
+        #438cff 45%,
+        #9d4edd 70%,
+        transparent 100%
+    );
+    animation: qaicysRotateGlow 4.5s linear infinite;
+    z-index: 1;
+}
+
+@keyframes qaicysRotateGlow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.download-inner {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    padding: 40px 30px;
+    text-align: center;
+    border-radius: 14.5px;
+    background: linear-gradient(135deg, rgba(6, 16, 31, 0.94) 0%, rgba(6, 10, 28, 0.96) 100%);
+    backdrop-filter: blur(10px);
+}
+
+.download-small-title {
+    margin-bottom: 14px;
+    color: #00f6ff;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+
+.download-inner h2 {
+    margin-bottom: 16px;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.download-description {
+    max-width: 720px;
+    margin: 0 auto 26px;
+    color: #8fa0c1;
+    font-size: 15.5px;
+    line-height: 1.7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rotating-glow-box::before {
+        animation: none;
+        background: linear-gradient(135deg, rgba(0, 240, 255, 0.6), rgba(157, 78, 221, 0.6));
+    }
+}
+
+.download-rulebook {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    min-width: 220px;
+    padding: 18px 28px;
+    background: #00dce8;
+    color: #020711;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-rulebook:hover {
+    transform: translateY(-4px);
+    background: #00f6ff;
+    box-shadow: 0 0 10px rgba(0, 246, 255, 0.65), 0 0 25px rgba(0, 246, 255, 0.30);
+}
+
+.download-arrow {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.download-rulebook:hover .download-arrow {
+    transform: translateY(4px);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    width: 100%;
+    margin-top: 45px;
+    background: transparent;
+}
+
+.footer-gradient {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, #00f6ff 0%, #7344ff 60%, #ba28ff 100%);
+}
+
+.footer-content {
+    padding: 20px 20px 22px;
+    text-align: center;
+}
+
+.footer-content h3 {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 8px;
+}
+
+.footer-content h3 span {
+    color: #00f6ff;
+}
+
+.department {
+    margin-top: 8px;
+    color: #c12fff;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.copyright {
+    margin-top: 8px;
+    color: #8fa0c1;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET (max-width: 900px)
+========================================================= */
+
+@media (max-width: 900px) {
+    .rulebook-page {
+        padding: 30px 25px 50px;
+    }
+
+    .rulebook-logo {
+        width: 160px;
+    }
+
+    .guidelines-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE — MOBILE (max-width: 650px)
+========================================================= */
+
+@media (max-width: 650px) {
+    .rulebook-page {
+        padding: 20px 16px 40px;
+    }
+
+    .rulebook-hero h1 {
+        font-size: 34px;
+    }
+
+    .download-inner h2 {
+        font-size: 18px;
+    }
+
+    .download-rulebook {
+        min-width: 190px;
+        padding: 14px 20px;
+        font-size: 11px;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE — SMALL PHONES (max-width: 380px)
+========================================================= */
+
+@media (max-width: 380px) {
+    .rulebook-page {
+        padding: 15px 12px 30px;
+    }
+
+    .rulebook-hero h1 {
+        font-size: 28px;
+    }
+
+    .guideline-card {
+        padding: 18px 16px;
+        gap: 16px;
+    }
+
+    .guideline-card p {
+        font-size: 13px;
+    }
+}
+
+/* =========================================================
+   READABILITY SCALE
+========================================================= */
+
+.rulebook-brand,
+.rulebook-intro,
+.section-label,
+.download-small-title,
+.download-rulebook { font-size: 14px; line-height: 1.5; }
+
+.guidelines-subtitle,
+.guideline-card p,
+.download-description { font-size: 16px; }
+
+.guideline-number { font-size: 15px; }
+.footer-content h3 { font-size: 16px; }
+.department { font-size: 13px; }
+.copyright { font-size: 12px; line-height: 1.45; }
+
+@media (max-width: 650px) {
+    .rulebook-brand,
+    .rulebook-intro,
+    .section-label,
+    .download-small-title { font-size: 13px; }
+    .download-rulebook { font-size: 15px; }
+    .guidelines-subtitle,
+    .guideline-card p,
+    .download-description { font-size: 15px; }
+    .footer-content h3 { font-size: 15px; }
+    .department { font-size: 13px; }
+    .copyright { font-size: 12px; }
+}
+
+.rulebook-hero {
+    padding: 10px 20px 40px !important;
+    margin: 0 !important;
+}
+
+.rulebook-hero-logo {
+    width: 250px !important;
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+}
+
+/* =========================================
+   RULEBOOK HERO SPACING FIX
+========================================= */
+
+.rulebook-page .page-back-nav {
+    min-height: 30px !important;
+    height: 30px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.rulebook-page .rulebook-hero {
+    margin-top: 0 !important;
+    padding-top: 10px !important;
+}
+
+.rulebook-page .rulebook-logo {
+    display: block;
+    width: 250px !important;
+    height: auto !important;
+    margin: 0 auto 10px !important;
+}

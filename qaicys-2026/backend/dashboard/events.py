@@ -1,0 +1,105 @@
+from registration.models import (
+    BattleZoneRegistration,
+    BidByteRegistration,
+    ClickCraftRegistration,
+    EstrellaRegistration,
+    HennaHuesRegistration,
+    PalettePopRegistration,
+    PitchPerfectRegistration,
+    PixelCipherRegistration,
+    PromptoopiaRegistration,
+    SynapseRegistration,
+    TheVerdictRegistration,
+    UnscriptedRegistration,
+)
+from registration.serializers import (
+    BattleZoneSerializer,
+    BidByteSerializer,
+    ClickCraftSerializer,
+    EstrellaSerializer,
+    HennaHuesSerializer,
+    PalettePopSerializer,
+    PitchPerfectSerializer,
+    PixelCipherSerializer,
+    PromptoopiaSerializer,
+    SynapseSerializer,
+    TheVerdictSerializer,
+    UnscriptedSerializer,
+)
+
+
+EVENTS = {
+    "pitch-perfect": {
+        "name": "Pitch Perfect", "model": PitchPerfectRegistration,
+        "serializer": PitchPerfectSerializer,
+        "columns": ["team_name", "name", "registration_number", "year_of_study", "department", "whatsapp_number", "participant_2_name", "participant_2_registration_number", "participant_2_year_of_study", "participant_2_department", "participant_2_whatsapp_number", "created_at"],
+        "search": ["team_name", "name", "registration_number", "participant_2_name", "participant_2_registration_number", "email", "participant_2_email"],
+    },
+    "bid-byte": {
+        "name": "Bid Byte", "model": BidByteRegistration, "serializer": BidByteSerializer,
+        "columns": ["team_name", "team_lead_name", "team_lead_registration_number", "member_1_name", "member_1_registration_number", "member_1_year_department", "member_2_name", "member_2_registration_number", "member_2_year_department", "created_at"],
+        "search": ["team_name", "team_lead_name", "team_lead_registration_number", "member_1_registration_number", "member_2_registration_number"],
+    },
+    "promptoopia": {
+        "name": "Promptoopia", "model": PromptoopiaRegistration,
+        "serializer": PromptoopiaSerializer,
+        "columns": ["name", "registration_number", "year_of_study", "department", "whatsapp_number", "email", "created_at"],
+        "search": ["name", "registration_number", "email"],
+    },
+    "pixel-cipher": {
+        "name": "Pixel Cipher", "model": PixelCipherRegistration,
+        "serializer": PixelCipherSerializer,
+        "columns": ["name", "registration_number", "year_of_study", "department", "whatsapp_number", "email", "created_at"],
+        "search": ["name", "registration_number", "email"],
+    },
+    "synapse": {
+        "name": "Synapse", "model": SynapseRegistration, "serializer": SynapseSerializer,
+        "columns": ["team_name", "name", "registration_number", "year_of_study", "department", "whatsapp_number", "participant_2_name", "participant_2_registration_number", "participant_2_year_of_study", "participant_2_department", "participant_2_whatsapp_number", "created_at"],
+        "search": ["team_name", "name", "registration_number", "participant_2_name", "participant_2_registration_number", "email", "participant_2_email"],
+    },
+    "henna-hues": {
+        "name": "Henna Hues", "model": HennaHuesRegistration,
+        "serializer": HennaHuesSerializer,
+        "columns": ["team_name", "name", "registration_number", "year_of_study", "department", "whatsapp_number", "participant_2_name", "participant_2_registration_number", "participant_2_year_of_study", "participant_2_department", "participant_2_whatsapp_number", "created_at"],
+        "search": ["team_name", "name", "registration_number", "participant_2_name", "participant_2_registration_number", "email", "participant_2_email"],
+        "column_labels": {"name": "Artist Name", "registration_number": "Artist Register Number", "year_of_study": "Artist Year", "department": "Artist Department", "whatsapp_number": "Artist WhatsApp", "participant_2_name": "Model Name", "participant_2_registration_number": "Model Register Number", "participant_2_year_of_study": "Model Year", "participant_2_department": "Model Department", "participant_2_whatsapp_number": "Model WhatsApp"},
+    },
+    "palette-pop": {
+        "name": "Palette Pop", "model": PalettePopRegistration,
+        "serializer": PalettePopSerializer,
+        "columns": ["team_name", "name", "registration_number", "year_of_study", "department", "whatsapp_number", "participant_2_name", "participant_2_registration_number", "participant_2_year_of_study", "participant_2_department", "participant_2_whatsapp_number", "created_at"],
+        "search": ["team_name", "name", "registration_number", "participant_2_name", "participant_2_registration_number", "email", "participant_2_email"],
+        "column_labels": {"name": "Artist Name", "registration_number": "Artist Register Number", "year_of_study": "Artist Year", "department": "Artist Department", "whatsapp_number": "Artist WhatsApp", "participant_2_name": "Model Name", "participant_2_registration_number": "Model Register Number", "participant_2_year_of_study": "Model Year", "participant_2_department": "Model Department", "participant_2_whatsapp_number": "Model WhatsApp"},
+    },
+    "click-craft": {
+        "name": "Click Craft", "model": ClickCraftRegistration,
+        "serializer": ClickCraftSerializer,
+        "columns": ["name", "registration_number", "year_of_study", "department", "whatsapp_number", "email", "created_at"],
+        "search": ["name", "registration_number", "email"],
+    },
+    "the-verdict": {
+        "name": "The Verdict", "model": TheVerdictRegistration,
+        "serializer": TheVerdictSerializer,
+        "columns": ["name", "registration_number", "year_of_study", "department", "language", "whatsapp_number", "email", "created_at"],
+        "search": ["name", "registration_number", "email"],
+    },
+    "estrella": {
+        "name": "Estrella — Star of the Event", "model": EstrellaRegistration,
+        "serializer": EstrellaSerializer,
+        "columns": ["name", "registration_number", "year_of_study", "department", "participated_in_technical_or_non_technical_event", "technical_or_non_technical_events", "created_at"],
+        "search": ["name", "registration_number", "email", "technical_or_non_technical_events"],
+        "column_labels": {"participated_in_technical_or_non_technical_event": "Other QAICYS Event?", "technical_or_non_technical_events": "Participated Event(s)"},
+    },
+    "unscripted": {
+        "name": "Unscripted", "model": UnscriptedRegistration,
+        "serializer": UnscriptedSerializer,
+        "columns": ["team_name", "team_size", "name", "registration_number", "year_of_study", "department", "participant_2_name", "participant_2_registration_number", "participant_2_year_of_study", "participant_2_department", "participant_3_name", "participant_3_registration_number", "participant_3_year_of_study", "participant_3_department", "participant_4_name", "participant_4_registration_number", "participant_4_year_of_study", "participant_4_department", "participant_5_name", "participant_5_registration_number", "participant_5_year_of_study", "participant_5_department", "created_at"],
+        "search": ["team_name", "name", "registration_number", "participant_2_name", "participant_2_registration_number", "participant_3_name", "participant_3_registration_number", "participant_4_name", "participant_4_registration_number", "participant_5_name", "participant_5_registration_number", "email"],
+    },
+    "battle-zone": {
+        "name": "Battle Zone", "model": BattleZoneRegistration,
+        "serializer": BattleZoneSerializer,
+        "columns": ["team_name", "team_lead_name", "team_lead_registration_number", "team_lead_department_year", "member_1_name", "member_1_registration_number", "member_1_department_year", "member_2_name", "member_2_registration_number", "member_2_department_year", "member_3_name", "member_3_registration_number", "member_3_department_year", "created_at"],
+        "search": ["team_name", "team_lead_name", "team_lead_registration_number", "member_1_registration_number", "member_2_registration_number", "member_3_registration_number"],
+    },
+}

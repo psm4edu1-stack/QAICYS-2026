@@ -1,0 +1,404 @@
+/* =========================================================
+   QAICYS 2026
+   NON-TECHNICAL EVENTS PAGE
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        linear-gradient(
+            rgba(3, 6, 23, 0.85),
+            rgba(5, 10, 35, 0.85)
+        ),
+        url("../assets/images/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #ffffff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* =========================================================
+   MAIN PAGE
+========================================================= */
+
+.events-page {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 32px 45px;
+    background: transparent;
+}
+
+/* =========================================================
+   PAGE HEADING / HERO
+========================================================= */
+
+.events-heading {
+    padding: 20px 0 50px;
+    text-align: center;
+}
+
+.page-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-20px);
+    margin-bottom: -15px;
+}
+
+.page-logo img {
+    display: block;
+    width: clamp(280px, 30vw, 400px);
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px rgba(112, 76, 255, 0.30)) drop-shadow(0 0 18px rgba(0, 240, 255, 0.15));
+}
+
+.events-eyebrow {
+    margin-bottom: 16px;
+    color: #00f0ff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+.events-heading h1 {
+    color: #f7f9ff;
+    font-size: clamp(38px, 6vw, 76px);
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.title-line {
+    width: 92px;
+    height: 2px;
+    margin: 24px auto 16px;
+    background: linear-gradient(90deg, #00f0ff, #9d4edd);
+}
+
+.events-subtitle {
+    color: #8490aa;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+/* =========================================================
+   EVENT GRID
+========================================================= */
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.event-card {
+    min-height: 185px;
+    padding: 30px 24px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(157, 78, 221, 0.35);
+    border-radius: 12px;
+    background: linear-gradient(145deg, rgba(15, 8, 32, 0.85), rgba(5, 7, 20, 0.95));
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 240, 255, 0.65);
+    box-shadow: 0 15px 40px rgba(0, 240, 255, 0.08);
+}
+
+.event-card-number {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: rgba(132, 144, 170, 0.18);
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.event-card-category {
+    margin-bottom: 10px;
+    color: #9d4edd;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.event-card h2 {
+    max-width: 85%;
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: 0.8px;
+}
+
+.event-card-line {
+    width: 100%;
+    height: 1px;
+    margin: 22px 0 18px;
+    background: rgba(255, 255, 255, 0.09);
+}
+
+.event-card-link {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #d9e0ff;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    transition: 0.25s ease;
+}
+
+.event-card-link span:last-child {
+    color: #9d4edd;
+    font-size: 17px;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.event-card:hover .event-card-link {
+    color: #ffffff;
+}
+
+.event-card:hover .event-card-link span:last-child {
+    color: #00f0ff;
+    transform: translateX(5px);
+}
+
+.event-card:nth-child(5) .event-card-category,
+.event-card:nth-child(6) .event-card-category,
+.event-card:nth-child(7) .event-card-category {
+    color: #00f0ff;
+}
+
+.event-card:nth-child(7) {
+    grid-column: 2;
+}
+
+/* =========================================================
+   RULE BOOK SECTION
+========================================================= */
+
+.rulebook-action {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.rulebook-action a {
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+    transition: 0.25s ease;
+}
+
+.rulebook-action a:hover {
+    color: #00f0ff;
+}
+
+.rule-line {
+    width: 150px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(157, 78, 221, 0.7));
+}
+
+.rule-line:last-child {
+    background: linear-gradient(90deg, rgba(157, 78, 221, 0.7), transparent);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    width: 100%;
+    margin-top: 50px;
+    background: transparent;
+}
+
+.footer-line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #9d4edd, #00f0ff, #9d4edd, transparent);
+    opacity: 0.7;
+}
+
+.footer-content {
+    padding: 22px 20px 24px;
+    text-align: center;
+}
+
+.footer-brand {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.footer-brand span {
+    color: #00f0ff;
+}
+
+.footer-department {
+    margin-top: 7px;
+    color: #9d4edd;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.footer-copy {
+    margin-top: 7px;
+    color: #8fa0c1;
+    font-size: 11px;
+    letter-spacing: 0.7px;
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET (max-width: 900px)
+========================================================= */
+
+@media (max-width: 900px) {
+    .events-page {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .events-heading {
+        padding: 25px 0 45px;
+    }
+
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .event-card:nth-child(7) {
+        grid-column: auto;
+    }
+
+    .event-card:last-child {
+        grid-column: 1 / -1;
+        width: calc(50% - 10px);
+        justify-self: center;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE — MOBILE (max-width: 600px)
+========================================================= */
+
+@media (max-width: 600px) {
+    .events-page {
+        padding: 0 16px 35px;
+    }
+
+    .events-heading h1 {
+        font-size: 34px;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .event-card:last-child {
+        width: 100%;
+        grid-column: auto;
+    }
+
+    .event-card {
+        min-height: 170px;
+        padding: 24px 20px;
+    }
+
+    .event-card h2 {
+        font-size: 19px;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE — SMALL PHONES (max-width: 380px)
+========================================================= */
+
+@media (max-width: 380px) {
+    .events-page {
+        padding: 0 12px 25px;
+    }
+
+    .events-heading h1 {
+        font-size: 28px;
+    }
+
+    .event-card h2 {
+        font-size: 17px;
+    }
+}
+
+/* =========================================================
+   READABILITY SCALE
+========================================================= */
+
+.events-eyebrow,
+.events-subtitle,
+.event-card-category,
+.event-card-link,
+.rulebook-action a { font-size: 14px; line-height: 1.45; }
+
+.footer-brand { font-size: 15px; }
+.footer-department { font-size: 14px; }
+.footer-copy { font-size: 13px; line-height: 1.45; }
+
+@media (max-width: 650px) {
+    .events-eyebrow,
+    .events-subtitle,
+    .event-card-category,
+    .footer-copy { font-size: 12px; }
+
+    .footer-brand { font-size: 14px; }
+    .footer-department { font-size: 13px; }
+
+    .event-card-link,
+    .rulebook-action a { font-size: 14px; }
+
+    .event-card h2 { font-size: 19px; }
+}

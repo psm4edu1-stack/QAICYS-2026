@@ -1,0 +1,230 @@
+/* =========================================================
+   QAICYS SHARED PUBLIC HEADER
+   Used by every public page except the registration form.
+========================================================= */
+
+.site-header,
+.site-header * {
+    box-sizing: border-box;
+}
+
+.site-header {
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    min-height: 95px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    align-items: center;
+    gap: 32px;
+    padding: 10px 5%;
+    background: rgba(2, 5, 25, 0.94);
+    border-bottom: 1px solid rgba(0, 238, 255, 0.18);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.site-brand {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+}
+
+.site-logo-link {
+    display: block;
+    flex: 0 0 auto;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.site-college-logo {
+    display: block;
+    width: 165px;
+    height: auto;
+}
+
+.site-college-details {
+    min-width: 0;
+    margin-left: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+}
+
+.site-college-name {
+    margin: 0;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.site-college-website {
+    width: fit-content;
+    color: #4da0ff;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: 1.8px;
+    text-decoration: none;
+    transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+.site-college-website:hover,
+.site-college-website:focus-visible,
+.site-logo-link:focus-visible,
+.site-header-link:hover,
+.site-header-link:focus-visible {
+    color: #00eaff;
+    text-shadow: 0 0 10px rgba(0, 234, 255, 0.7);
+}
+
+.site-club-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.site-club-logo {
+    display: block;
+    width: 66px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    clip-path: circle(47.5% at 50% 50%);
+    filter: drop-shadow(0 0 7px rgba(0, 234, 255, 0.2));
+}
+
+.site-primary-nav {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.site-header-link {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 1.3;
+    letter-spacing: 3px;
+    text-decoration: none;
+    transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+.site-college-website:focus-visible,
+.site-logo-link:focus-visible,
+.site-header-link:focus-visible,
+.page-back-link:focus-visible {
+    outline: 2px solid #00eaff;
+    outline-offset: 5px;
+}
+
+/* The back control remains separate from the full-width header. */
+.page-back-nav {
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.page-back-link {
+    color: #00f0ff;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    line-height: 1.4;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: color 0.25s ease, text-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.page-back-link:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(0, 240, 255, 0.8);
+    transform: translateX(-3px);
+}
+
+@media (max-width: 1120px) {
+    .site-college-details {
+        display: none;
+    }
+}
+
+@media (max-width: 999px) {
+    .site-header {
+        min-height: 75px;
+        gap: 16px;
+        padding: 8px 16px;
+    }
+
+    .site-college-logo {
+        width: 125px;
+    }
+
+    .site-club-logos {
+        gap: 8px;
+    }
+
+    .site-club-logo {
+        width: 52px;
+    }
+
+    .site-header-link,
+    .page-back-link {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .page-back-nav {
+        min-height: 44px;
+        margin-bottom: 6px;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-header {
+        gap: 10px;
+        padding-inline: 12px;
+    }
+
+    .site-college-logo {
+        width: 108px;
+    }
+
+    .site-club-logos {
+        gap: 5px;
+    }
+
+    .site-club-logo {
+        width: 40px;
+    }
+
+    .site-header-link {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+}
+
+@media (max-width: 380px) {
+    .site-header {
+        padding-inline: 12px;
+    }
+
+    .site-college-logo {
+        width: 92px;
+    }
+
+    .site-club-logo {
+        width: 36px;
+    }
+
+    .site-header-link,
+    .page-back-link {
+        letter-spacing: 1.5px;
+    }
+}

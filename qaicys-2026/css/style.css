@@ -1,0 +1,1007 @@
+/* =========================================================
+   QAICYS 2026 - MAIN HOME PAGE STYLESHEET
+   CONSOLIDATED & AUTHORITATIVE
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #ffffff;
+    background:
+        linear-gradient(
+            rgba(2, 6, 30, 0.76),
+            rgba(2, 7, 35, 0.82)
+        ),
+        url("../assets/images/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+/* =========================================================
+   DESKTOP HERO SECTION (50% / 50% GRID)
+========================================================= */
+
+.hero-section {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    min-height: calc(100vh - 95px);
+    margin: 0 auto;
+    padding: 20px 4%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+/* =========================================================
+   LEFT COLUMN - MAIN QAICYS LOGO
+========================================================= */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.hero-logo {
+    width: clamp(700px, 58vw, 900px);
+    max-width: none;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    filter:
+        drop-shadow(0 0 20px rgba(0, 180, 255, 0.4))
+        drop-shadow(0 0 35px rgba(140, 0, 255, 0.25));
+}
+
+
+/* =========================================================
+   RIGHT COLUMN - CONTENT CONTAINER
+========================================================= */
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: min(100%, 680px);
+    margin: 0 auto;
+    gap: 16px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 10;
+}
+
+
+/* =========================================================
+   1. QAICYS DESKTOP TITLE IMAGE
+========================================================= */
+
+.desktop-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: clamp(118px, 17vh, 124px);
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+.desktop-title-img {
+    width: clamp(380px, 38vw, 520px);
+    height: auto;
+    display: block;
+    object-fit: contain;
+    margin: 0 auto;
+    transform: translateY(-29.2%);
+    pointer-events: none;
+    filter: drop-shadow(0 0 15px rgba(100, 0, 255, 0.35));
+}
+
+
+/* =========================================================
+   2. TAGLINE (DIRECTLY BELOW TITLE)
+========================================================= */
+
+.hero-tagline {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    line-height: 1.5;
+}
+
+.cyan {
+    color: #00eaff;
+}
+
+.blue {
+    color: #438bff;
+}
+
+.purple {
+    color: #a344ff;
+}
+
+
+/* =========================================================
+   3. ABOUT EVENT CARD
+========================================================= */
+
+.about-simple {
+    width: 100%;
+    padding: 16px 22px;
+    margin: 0;
+    text-align: left;
+    background: rgba(3, 9, 32, 0.86);
+    border: 1px solid rgba(0, 230, 255, 0.58);
+    border-radius: 17px;
+    box-shadow: 0 0 20px rgba(0, 150, 255, 0.06);
+}
+
+.about-title {
+    color: #00eaff;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin-bottom: 8px;
+}
+
+.about-description {
+    color: #dce5f7;
+    font-size: 14.5px;
+    font-weight: 500;
+    line-height: 1.55;
+}
+
+.qaicys-name {
+    color: #478cff;
+    font-weight: 900;
+}
+
+.department {
+    color: #a443ff;
+    font-weight: 900;
+}
+
+.event-date {
+    color: #ffffff;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   4. REGISTRATION CARD
+========================================================= */
+
+.registration-card {
+    width: 100%;
+    padding: 15px 18px;
+    margin: 0;
+    border-radius: 17px;
+    background:
+        linear-gradient(
+            rgba(4, 9, 31, 0.94),
+            rgba(4, 9, 31, 0.94)
+        ) padding-box,
+        linear-gradient(
+            90deg,
+            #00eaff,
+            #3c6cff,
+            #a63cff
+        ) border-box;
+    border: 1px solid transparent;
+    box-shadow: 0 0 20px rgba(0, 170, 255, 0.07);
+}
+
+.registration-inner {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    align-items: center;
+}
+
+.registration-block {
+    text-align: center;
+    padding: 0 10px;
+}
+
+.registration-divider {
+    width: 1px;
+    height: 60px;
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(255, 255, 255, 0.45),
+            transparent
+        );
+}
+
+.registration-label {
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-bottom: 6px;
+}
+
+.cyan-label {
+    color: #00eaff;
+}
+
+.purple-label {
+    color: #a744ff;
+}
+
+.registration-date {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 900;
+    margin-bottom: 2px;
+}
+
+.registration-time {
+    color: #9cbcf0;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   5. COUNTDOWN SECTION
+========================================================= */
+
+.countdown-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.countdown-label {
+    color: #00eaff;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin-bottom: 8px;
+}
+
+.countdown {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.time-box {
+    width: 80px;
+    height: 82px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background: rgba(5, 13, 39, 0.78);
+    border: 1px solid rgba(0, 220, 255, 0.78);
+}
+
+.time-box span {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.time-box small {
+    color: #abc4ef;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-top: 6px;
+}
+
+.separator {
+    color: #00eaff;
+    font-size: 26px;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   6. EXPLORE BUTTON
+========================================================= */
+
+.hero-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 2px 0 0;
+}
+
+.hero-btn {
+    width: min(100%, 330px);
+    min-height: 54px;
+    padding: 14px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #00eaff;
+    color: #031027;
+    text-decoration: none;
+    font-size: 12.5px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    border: 1px solid #00eaff;
+    border-radius: 6px;
+    box-shadow: 0 0 18px rgba(0, 234, 255, 0.38);
+    transition: background 0.25s ease, border-color 0.25s ease,
+        box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.hero-btn:hover {
+    background: #ffffff;
+    color: #031027;
+    border-color: #ffffff;
+    box-shadow: 0 0 24px rgba(0, 234, 255, 0.55);
+    transform: translateY(-2px);
+}
+
+.hero-btn:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   7. RULE BOOK
+========================================================= */
+
+.rulebook-area {
+    margin: 0;
+}
+
+.rulebook-link {
+    color: #00eaff;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    transition: 0.25s ease;
+}
+
+.rulebook-link:hover {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   FOOTER - CENTERED STACKED LAYOUT
+========================================================= */
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 28px 20px 24px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(0, 220, 255, 0.35);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* QAICYS 2026 */
+
+.footer-brand {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.footer-brand span {
+    color: #00eaff;
+}
+
+
+/* Department */
+
+.footer-department {
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: center;
+    color: #b84cff;
+}
+
+
+/* Copyright */
+
+.footer-copy {
+    margin-top: 7px;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.3;
+    text-align: center;
+    opacity: 0.75;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .footer {
+        padding: 24px 16px 20px;
+    }
+
+    .footer-brand {
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+
+    .footer-department {
+        font-size: 11px;
+    }
+
+    .footer-copy {
+        font-size: 9px;
+    }
+}
+
+/* =========================================================
+   TABLET & MOBILE (SINGLE-COLUMN STACKED LAYOUT)
+========================================================= */
+
+@media (max-width: 999px) {
+
+    body {
+        background-attachment: scroll;
+    }
+
+    .hero-section {
+        min-height: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 16px 40px;
+        gap: 16px;
+        overflow: visible;
+    }
+
+    .logo-container {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        order: 1;
+    }
+
+    .hero-logo {
+        width: clamp(280px, 70vw, 420px);
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .right-content {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        padding: 0;
+        gap: 14px;
+        order: 2;
+    }
+
+    .desktop-title-img {
+        width: clamp(280px, 75vw, 400px);
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .desktop-title {
+        height: clamp(70px, 20vw, 104px);
+    }
+
+    .hero-tagline {
+        font-size: 11px;
+        line-height: 1.5;
+        padding: 0 5px;
+    }
+
+    .about-simple {
+        padding: 16px;
+    }
+
+    .about-title {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    .about-description {
+        font-size: 13px;
+        line-height: 1.55;
+    }
+
+    .registration-card {
+        padding: 14px 10px;
+    }
+
+    .registration-label {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .registration-date {
+        font-size: 13px;
+    }
+
+    .registration-time {
+        font-size: 10px;
+    }
+
+    .countdown-label {
+        font-size: 11px;
+        letter-spacing: 3px;
+        margin-bottom: 8px;
+    }
+
+    .countdown {
+        gap: 5px;
+    }
+
+    .time-box {
+        width: clamp(52px, 17vw, 68px);
+        height: clamp(58px, 18vw, 70px);
+    }
+
+    .time-box span {
+        font-size: clamp(1.1rem, 5vw, 1.55rem);
+    }
+
+    .time-box small {
+        font-size: 8px;
+        letter-spacing: 1px;
+        margin-top: 4px;
+    }
+
+    .separator {
+        font-size: 20px;
+    }
+
+    .hero-btn {
+        width: 100%;
+        max-width: 320px;
+        min-height: 52px;
+        padding: 13px 16px;
+    }
+
+    .rulebook-link {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .footer-content {
+        height: auto;
+        min-height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+        padding: 20px 15px;
+    }
+
+    .footer-brand,
+    .footer-department,
+    .footer-copy {
+        text-align: center;
+    }
+
+    .footer-brand {
+        font-size: 15px;
+    }
+
+    .footer-department {
+        font-size: 11px;
+    }
+
+    .footer-copy {
+        font-size: 10px;
+    }
+}
+
+
+/* =========================================================
+   MID MOBILE (max-width: 600px)
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .hero-logo {
+        width: clamp(260px, 80vw, 360px);
+    }
+
+    .desktop-title-img {
+        width: clamp(260px, 80vw, 360px);
+    }
+
+    .about-simple,
+    .registration-card {
+        width: 100%;
+    }
+
+    .hero-btn {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES (max-width: 380px)
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .hero-section {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .hero-logo {
+        width: 88vw;
+    }
+
+    .desktop-title-img {
+        width: 88vw;
+    }
+
+    .hero-tagline {
+        font-size: 9.5px;
+    }
+
+    .about-description {
+        font-size: 11.5px;
+    }
+
+    .registration-date {
+        font-size: 11px;
+    }
+
+    .time-box {
+        width: 48px;
+        height: 54px;
+        border-radius: 10px;
+    }
+
+    .time-box span {
+        font-size: 0.95rem;
+    }
+
+    .time-box small {
+        font-size: 6.5px;
+        margin-top: 2px;
+    }
+
+    .countdown {
+        gap: 3px;
+    }
+
+    .separator {
+        font-size: 14px;
+    }
+}
+
+/* =========================================================
+   MOVING GLOW BORDER
+   About Event + Registration Blocks
+========================================================= */
+
+/* ABOUT THE EVENT */
+.about-event,
+.about-section,
+.event-about {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+
+/* REGISTRATION */
+.registration,
+.registration-section,
+.registration-box {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+
+/* Moving glow layer */
+.about-event::before,
+.about-section::before,
+.event-about::before,
+.registration::before,
+.registration-section::before,
+.registration-box::before {
+    content: "";
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    top: -90px;
+    left: -90px;
+
+    background: conic-gradient(
+        from 0deg,
+        transparent 0deg,
+        transparent 250deg,
+        #00eaff 285deg,
+        #8b5cff 320deg,
+        #ff35d1 345deg,
+        transparent 360deg
+    );
+
+    border-radius: 50%;
+
+    filter: blur(12px);
+
+    animation: movingBlockGlow 4s linear infinite;
+
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+/* Dark inner layer keeps the block interior clean */
+.about-event::after,
+.about-section::after,
+.event-about::after,
+.registration::after,
+.registration-section::after,
+.registration-box::after {
+    content: "";
+    position: absolute;
+    inset: 1px;
+
+    border-radius: inherit;
+
+    background: rgba(4, 10, 30, 0.94);
+
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+/* =========================================================
+   QAICYS - ROUNDED BORDER MOVING GLOW
+   ABOUT EVENT + REGISTRATION CARD
+========================================================= */
+
+/* Animated angle */
+@property --qaicys-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+
+/* =========================================================
+   ABOUT EVENT
+========================================================= */
+
+.about-simple {
+    position: relative;
+    isolation: isolate;
+    border-radius: 18px;
+}
+
+
+/* Moving glowing border */
+.about-simple::before {
+    content: "";
+    position: absolute;
+
+    inset: -2px;
+
+    border-radius: 18px;
+
+    background: conic-gradient(
+        from var(--qaicys-angle),
+        #00eaff 0deg,
+        #00eaff 55deg,
+        transparent 100deg,
+        transparent 180deg,
+        #b84cff 235deg,
+        #b84cff 290deg,
+        transparent 335deg,
+        #00eaff 360deg
+    );
+
+    animation: qaicysBorderGlow 3s linear infinite;
+
+    z-index: -2;
+
+    pointer-events: none;
+}
+
+
+/* Inner background cuts out the middle */
+.about-simple::after {
+    content: "";
+    position: absolute;
+
+    inset: 2px;
+
+    border-radius: 16px;
+
+    background: rgba(5, 10, 30, 0.95);
+
+    z-index: -1;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   REGISTRATION CARD
+========================================================= */
+
+.registration-card {
+    position: relative;
+    isolation: isolate;
+    border-radius: 18px;
+}
+
+
+/* Moving glowing border */
+.registration-card::before {
+    content: "";
+    position: absolute;
+
+    inset: -2px;
+
+    border-radius: 18px;
+
+    background: conic-gradient(
+        from var(--qaicys-angle),
+        #00eaff 0deg,
+        #00eaff 55deg,
+        transparent 100deg,
+        transparent 180deg,
+        #b84cff 235deg,
+        #b84cff 290deg,
+        transparent 335deg,
+        #00eaff 360deg
+    );
+
+    animation: qaicysBorderGlow 3s linear infinite;
+
+    z-index: -2;
+
+    pointer-events: none;
+}
+
+
+/* Inner background */
+.registration-card::after {
+    content: "";
+    position: absolute;
+
+    inset: 2px;
+
+    border-radius: 16px;
+
+    background: rgba(5, 10, 30, 0.95);
+
+    z-index: -1;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   ACTUAL MOVING GLOW
+========================================================= */
+
+@keyframes qaicysBorderGlow {
+
+    0% {
+        --qaicys-angle: 0deg;
+    }
+
+    100% {
+        --qaicys-angle: 360deg;
+    }
+
+}
+
+
+/* =========================================================
+   SOFT OUTER GLOW
+========================================================= */
+
+.about-simple::before,
+.registration-card::before {
+    filter:
+        drop-shadow(0 0 3px #00eaff)
+        drop-shadow(0 0 7px rgba(0, 234, 255, 0.65))
+        drop-shadow(0 0 12px rgba(184, 76, 255, 0.45));
+}
+
+/* =========================================================
+   READABILITY SCALE
+========================================================= */
+
+.hero-tagline { font-size: 15px; line-height: 1.5; }
+.about-title { font-size: 15px; }
+.about-description { font-size: 16px; line-height: 1.6; }
+.registration-label { font-size: 12px; line-height: 1.4; }
+.registration-date { font-size: 17px; }
+.registration-time { font-size: 13px; }
+.countdown-label { font-size: 14px; }
+.time-box small { font-size: 11px; }
+.hero-btn { font-size: 15px; line-height: 1.35; }
+.rulebook-link { font-size: 14px; }
+.footer-department { font-size: 14px; }
+.footer-copy { font-size: 12px; }
+
+@media (max-width: 700px) {
+    .hero-tagline { font-size: 12px; }
+    .about-title { font-size: 13px; }
+    .about-description { font-size: 14px; line-height: 1.55; }
+    .registration-label { font-size: 11px; }
+    .registration-date { font-size: 14px; }
+    .registration-time,
+    .countdown-label { font-size: 12px; }
+    .time-box small { font-size: 11px; }
+    .hero-btn { font-size: 14px; }
+    .rulebook-link { font-size: 13px; }
+    .footer-brand { font-size: 15px; }
+    .footer-department { font-size: 13px; }
+    .footer-copy { font-size: 12px; line-height: 1.45; }
+}

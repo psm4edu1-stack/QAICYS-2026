@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Login | QAICYS 2026</title>
+    <link rel="stylesheet" href="{% static 'dashboard/dashboard.css' %}">
+</head>
+<body>
+<main class="manager-login-page">
+    <a class="manager-back" href="{{ frontend_url|default:'/' }}">← BACK TO WEBSITE</a>
+    <section class="manager-login-card">
+        <p class="manager-eyebrow">QAICYS 2026</p>
+        <h1>MANAGER LOGIN</h1>
+        <p class="manager-intro">Sign in with an authorized Django superuser account.</p>
+
+        <form method="post" novalidate>
+            {% csrf_token %}
+            <div class="manager-field">
+                <label for="id_username">Username</label>
+                {{ form.username }}
+                {% for error in form.username.errors %}<p class="field-error">{{ error }}</p>{% endfor %}
+            </div>
+            <div class="manager-field">
+                <label for="id_password">Password</label>
+                {{ form.password }}
+                {% for error in form.password.errors %}<p class="field-error">{{ error }}</p>{% endfor %}
+            </div>
+            {% if form.non_field_errors %}<div class="manager-message error">{{ form.non_field_errors }}</div>{% endif %}
+            {% if access_error %}<div class="manager-message error">{{ access_error }}</div>{% endif %}
+            <button class="manager-button" type="submit">LOGIN →</button>
+        </form>
+    </section>
+</main>
+</body>
+</html>

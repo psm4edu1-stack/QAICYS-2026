@@ -1,0 +1,196 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at 50% 8%, rgba(18, 56, 100, .28), transparent 34%), #020711;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button, input { font: inherit; }
+
+.manager-login-page {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 70px 20px;
+}
+
+.manager-back {
+    position: absolute;
+    top: 28px;
+    left: 5%;
+    color: #00f0ff;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.manager-login-card {
+    width: min(100%, 480px);
+    padding: 42px;
+    background: rgba(7, 14, 35, .92);
+    border: 1px solid rgba(0, 240, 255, .35);
+    border-top: 2px solid #00f0ff;
+}
+
+.manager-eyebrow {
+    color: #00f0ff;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 4px;
+}
+
+.manager-login-card h1, .dashboard-nav h1 {
+    margin-top: 12px;
+    font-size: clamp(28px, 5vw, 44px);
+    letter-spacing: 2px;
+}
+
+.manager-intro { margin: 14px 0 30px; color: #aab7d5; line-height: 1.6; }
+.manager-field { margin-bottom: 22px; }
+.manager-field label, .dashboard-search span {
+    display: block;
+    margin-bottom: 9px;
+    color: #9d4edd;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.manager-field input, .dashboard-search input {
+    width: 100%;
+    padding: 14px 15px;
+    background: #050c1e;
+    border: 1px solid #273558;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+}
+
+.manager-field input:focus, .dashboard-search input:focus { border-color: #00f0ff; }
+.manager-button, .logout-button {
+    border: 1px solid #00f0ff;
+    background: #00f0ff;
+    color: #031027;
+    padding: 14px 22px;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.manager-button { width: 100%; margin-top: 8px; }
+.field-error, .manager-message.error { color: #ff829b; }
+.field-error { margin-top: 7px; font-size: 13px; }
+.manager-message { min-height: 22px; margin: 18px 0; color: #aab7d5; line-height: 1.5; }
+.manager-message ul { list-style: none; }
+
+.dashboard-page { width: min(100%, 1500px); margin: auto; padding: 28px 4% 60px; }
+.dashboard-nav { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-bottom: 25px; border-bottom: 1px solid rgba(0,240,255,.2); }
+.dashboard-nav h1 { font-size: clamp(24px, 4vw, 40px); }
+.logout-button { background: transparent; color: #00f0ff; }
+.dashboard-layout { display: grid; grid-template-columns: minmax(230px, .7fr) minmax(0, 3fr); gap: 28px; margin-top: 30px; }
+.event-sidebar, .registration-panel { min-width: 0; background: rgba(5,12,30,.8); border: 1px solid rgba(0,240,255,.18); padding: 24px; }
+.event-sidebar h2 { margin-bottom: 18px; color: #9d4edd; font-size: 13px; letter-spacing: 3px; }
+.event-list { display: flex; flex-direction: column; gap: 8px; }
+.event-option { width: 100%; display: flex; justify-content: space-between; gap: 12px; padding: 13px; border: 1px solid #263554; background: #060e24; color: #dce7ff; text-align: left; cursor: pointer; }
+.event-option:hover, .event-option.active { border-color: #00f0ff; color: #00f0ff; }
+.event-count { color: #9d4edd; font-weight: 900; }
+.registration-toolbar { display: flex; justify-content: space-between; align-items: end; gap: 25px; }
+.registration-toolbar h2 { margin-top: 9px; font-size: clamp(22px, 4vw, 34px); }
+.registration-count { margin-top: 8px; color: #9d4edd; font-weight: 800; }
+.registration-actions { width: min(100%, 470px); display: flex; align-items: end; gap: 12px; }
+.dashboard-search { flex: 1; min-width: 0; }
+.dashboard-search input { font-size: 14px; }
+.export-button {
+    min-height: 48px;
+    padding: 12px 16px;
+    border: 1px solid #00f0ff;
+    background: #00f0ff;
+    color: #031027;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.export-button:hover, .export-button:focus-visible { background: #6af7ff; }
+.export-button:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+.export-button:disabled { opacity: .45; cursor: not-allowed; }
+.table-scroll {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-inline: contain;
+    scrollbar-gutter: stable;
+    -webkit-overflow-scrolling: touch;
+}
+.table-scroll:focus-visible { outline: 2px solid #00f0ff; outline-offset: 4px; }
+.table-scroll::-webkit-scrollbar { height: 12px; }
+.table-scroll::-webkit-scrollbar-track { background: #03091a; }
+.table-scroll::-webkit-scrollbar-thumb { background: #344b78; border: 3px solid #03091a; border-radius: 999px; }
+.registration-table { width: max-content; min-width: 100%; border-collapse: collapse; }
+.registration-table th, .registration-table td { min-width: 135px; padding: 14px 16px; border-bottom: 1px solid rgba(255,255,255,.1); text-align: left; font-size: 13px; line-height: 1.45; vertical-align: top; white-space: nowrap; }
+.registration-table th { color: #00f0ff; background: #071127; font-size: 13px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; }
+.delete-registration { padding: 8px 10px; border: 1px solid #ff5473; background: transparent; color: #ff829b; cursor: pointer; font-size: 10px; font-weight: 800; }
+.empty-state { padding: 45px 20px; border: 1px dashed #2b3d61; color: #8f9dbc; text-align: center; }
+
+@media (max-width: 1100px) {
+    .registration-toolbar { align-items: flex-start; flex-direction: column; }
+    .registration-actions { width: 100%; }
+}
+
+@media (max-width: 850px) {
+    .dashboard-layout { grid-template-columns: 1fr; }
+    .event-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+    .manager-login-card { padding: 30px 20px; }
+    .dashboard-page { padding: 20px 15px 40px; }
+    .dashboard-nav, .registration-toolbar { align-items: flex-start; flex-direction: column; }
+    .event-sidebar, .registration-panel { padding: 18px; }
+    .event-list { grid-template-columns: 1fr; }
+    .registration-actions { width: 100%; align-items: stretch; flex-direction: column; }
+    .dashboard-search, .export-button { width: 100%; }
+}
+
+/* =========================================================
+   DASHBOARD READABILITY SCALE
+========================================================= */
+
+.manager-back { font-size: 14px; }
+.manager-eyebrow,
+.manager-field label,
+.dashboard-search span { font-size: 13px; line-height: 1.45; }
+.manager-intro,
+.manager-message,
+.event-option,
+.registration-count,
+.empty-state { font-size: 15px; }
+.manager-button,
+.logout-button { font-size: 14px; line-height: 1.4; }
+.event-sidebar h2 { font-size: 15px; }
+.dashboard-search input { font-size: 16px; }
+.registration-table th { font-size: 13px; }
+.registration-table td { font-size: 14px; line-height: 1.45; }
+.delete-registration { font-size: 14px; }
+
+@media (max-width: 650px) {
+    .manager-back,
+    .manager-button,
+    .logout-button,
+    .event-option,
+    .registration-count,
+    .empty-state { font-size: 14px; }
+
+    .manager-eyebrow,
+    .manager-field label,
+    .dashboard-search span,
+    .registration-table th { font-size: 12px; }
+
+    .delete-registration { font-size: 14px; }
+}

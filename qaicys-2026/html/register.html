@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration | QAICYS 2026</title>
+    <link rel="icon" href="../assets/images/qaicys-icon.jpeg">
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="../css/site-header.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="site-brand">
+        <a href="https://mrcas.edu.in/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="site-logo-link"
+           aria-label="Visit the MRCAS college website">
+            <img src="../assets/images/college-logo.png"
+                 alt="Manikam Ramaswami College of Arts and Science"
+                 class="site-college-logo">
+        </a>
+        <div class="site-college-details">
+            <p class="site-college-name">MANIKAM RAMASWAMI COLLEGE OF ARTS &amp; SCIENCE</p>
+            <a href="https://mrcas.edu.in/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="site-college-website">VISIT COLLEGE WEBSITE ↗</a>
+        </div>
+    </div>
+    <div class="site-club-logos" aria-label="Organizing clubs">
+        <img src="../assets/images/algorythms.jpeg" alt="Algorythms Club" class="site-club-logo">
+        <img src="../assets/images/cybernexus.jpeg" alt="Cybernexus Club" class="site-club-logo">
+    </div>
+    <nav class="site-primary-nav" aria-label="Primary navigation">
+        <a href="contact.html" class="site-header-link">CONTACT</a>
+    </nav>
+</header>
+
+
+<main class="register-page">
+    <header class="register-nav">
+        <a id="backToEvent" href="events.html" class="back-link">← BACK TO EVENTS</a>
+    </header>
+
+    <section class="register-header">
+        <p class="header-eyebrow">QAICYS 2026 • EVENT REGISTRATION</p>
+        <h1 id="registrationTitle">REGISTRATION</h1>
+        <p class="register-note">Fields marked <strong>*</strong> are required. Your registration number is checked against the official participant list.</p>
+    </section>
+
+    <form id="registrationForm" class="registration-form" novalidate>
+        <div id="formFields"></div>
+        <div id="formMessage" class="form-message" role="status" aria-live="polite"></div>
+        <button id="submitRegistration" class="submit-registration" type="submit">SUBMIT REGISTRATION →</button>
+    </form>
+</main>
+
+<footer class="footer">
+    <div class="footer-line"></div>
+    <div class="footer-content">
+        <p class="footer-brand">QAICYS <span>2026</span></p>
+        <p class="footer-department">Department of CS (AI &amp; CCCS)</p>
+        <p class="footer-copy">© 2026 QAICYS. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="../js/api-config.js"></script>
+<script src="../js/register.js"></script>
+</body>
+</html>

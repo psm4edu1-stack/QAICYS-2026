@@ -1,0 +1,163 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #ffffff;
+    background:
+        linear-gradient(
+            rgba(2, 6, 30, 0.76),
+            rgba(2, 7, 35, 0.82)
+        ),
+        url("../assets/images/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+
+.register-page { width: min(100%, 1180px); min-height: calc(100vh - 90px); margin: auto; padding: 30px 5% 70px; }
+.register-nav { display: flex; justify-content: space-between; align-items: center; gap: 25px; }
+.back-link, .nav-right a { color: #dce7ff; font-size: 11px; font-weight: 900; letter-spacing: 2px; text-decoration: none; }
+.back-link, .nav-right a:hover { color: #00f0ff; }
+.nav-right { display: flex; gap: 30px; }
+.register-header { max-width: 900px; margin: 60px auto 42px; text-align: center; }
+.header-eyebrow { color: #00f0ff; font-size: 11px; font-weight: 900; letter-spacing: 4px; }
+.register-header h1 { margin-top: 16px; font-size: clamp(38px, 7vw, 72px); line-height: 1.05; letter-spacing: 3px; overflow-wrap: anywhere; }
+.register-note { max-width: 680px; margin: 18px auto 0; color: #aab6d2; font-size: 15px; line-height: 1.6; }
+.register-note strong { color: #00f0ff; }
+.registration-form { max-width: 900px; margin: auto; }
+.form-section { margin-bottom: 24px; padding: 30px; background: linear-gradient(145deg, rgba(10,19,43,.9), rgba(4,8,20,.96)); border: 1px solid rgba(0,240,255,.25); border-top: 2px solid #00f0ff; }
+.form-section h2 { margin-bottom: 24px; color: #9d4edd; font-size: 15px; letter-spacing: 3px; text-transform: uppercase; }
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.form-group { min-width: 0; }
+.form-group.full-width { grid-column: 1 / -1; }
+.form-group label { display: block; margin-bottom: 9px; color: #e6ecfa; font-size: 14px; font-weight: 800; line-height: 1.35; }
+.required-mark { color: #00f0ff; }
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%; min-height: 50px; padding: 13px 14px; border: 1px solid #2b3a5d; border-radius: 3px;
+    background: #050c20; color: #fff; font-family: inherit; font-size: 16px; outline: none; transition: .2s ease;
+}
+.form-group textarea { min-height: 105px; resize: vertical; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #00f0ff; box-shadow: 0 0 0 2px rgba(0,240,255,.08); }
+.form-group.has-error input, .form-group.has-error select, .form-group.has-error textarea { border-color: #ff5f7c; }
+.form-group.is-valid input { border-color: #31e7a3; }
+.field-feedback { min-height: 19px; margin-top: 7px; color: #8998bb; font-size: 13px; line-height: 1.4; }
+.form-group.has-error .field-feedback { color: #ff8298; }
+.form-group.is-valid .field-feedback { color: #31e7a3; }
+.conditional-field[hidden] { display: none; }
+.form-message { display: none; margin: 22px 0; padding: 16px 18px; border: 1px solid; font-size: 15px; line-height: 1.55; }
+.form-message.success { display: block; color: #60efbb; background: rgba(36,195,135,.09); border-color: #31e7a3; }
+.form-message.error { display: block; color: #ff9aac; background: rgba(255,65,100,.08); border-color: #ff5f7c; }
+.submit-registration { width: 100%; min-height: 54px; padding: 15px 24px; border: 1px solid #00f0ff; background: #00f0ff; color: #031027; font-size: 13px; font-weight: 900; letter-spacing: 2px; cursor: pointer; transition: .2s ease; }
+.submit-registration:hover:not(:disabled) { background: #fff; border-color: #fff; transform: translateY(-2px); }
+.submit-registration:disabled { cursor: wait; opacity: .65; }
+
+@media (max-width: 700px) {
+    .register-page { padding: 24px 18px 50px; }
+    .register-nav { align-items: flex-start; }
+    .nav-right { gap: 13px; }
+    .back-link, .nav-right a { font-size: 8px; letter-spacing: 1px; }
+    .register-header { margin: 42px auto 32px; }
+    .header-eyebrow { font-size: 8px; letter-spacing: 2px; line-height: 1.7; }
+    .register-header h1 { font-size: clamp(34px, 12vw, 54px); }
+    .register-note { font-size: 14px; }
+    .form-section { padding: 23px 17px; }
+    .form-grid { grid-template-columns: 1fr; gap: 18px; }
+    .form-group.full-width { grid-column: auto; }
+    .form-group label { font-size: 14px; }
+    .form-group input, .form-group select, .form-group textarea { font-size: 16px; }
+}
+
+@media (max-width: 390px) {
+    .nav-right a:nth-child(2) { display: none; }
+    .form-section { padding: 20px 14px; }
+}
+
+/* =========================================================
+   READABILITY SCALE
+========================================================= */
+
+.back-link,
+.nav-right a,
+.header-eyebrow { font-size: 13px; }
+
+.register-note,
+.form-message { font-size: 16px; }
+.form-section h2 { font-size: 17px; line-height: 1.4; }
+.form-group label { font-size: 15px; }
+.field-feedback { font-size: 14px; }
+.submit-registration {
+    min-height: 58px;
+    font-size: 16px;
+    line-height: 1.4;
+}
+.footer-content { font-size: 13px; line-height: 1.45; }
+
+@media (max-width: 650px) {
+    .back-link,
+    .nav-right a,
+    .header-eyebrow { font-size: 12px; }
+
+    .register-note,
+    .form-message,
+    .form-group input,
+    .form-group select,
+    .form-group textarea { font-size: 16px; }
+
+    .form-section h2 { font-size: 16px; }
+    .form-group label,
+    .field-feedback,
+    .footer-content { font-size: 14px; }
+    .submit-registration { font-size: 15px; }
+}
+
+/* ==========================================================
+   09. FOOTER
+========================================================== */
+
+.footer {
+    width: 100%;
+    margin-top: 50px;
+    background: transparent;
+}
+
+.footer-line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 234, 255, 0.5), transparent);
+    margin-bottom: 25px;
+}
+
+.footer-content {
+    text-align: center;
+    padding: 0 20px 25px;
+}
+
+.footer-brand {
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: #ffffff;
+}
+
+.footer-brand span {
+    color: #00eaff;
+}
+
+.footer-department {
+    margin-top: 8px;
+    color: #a746ff;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.footer-copy {
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 12px;
+}

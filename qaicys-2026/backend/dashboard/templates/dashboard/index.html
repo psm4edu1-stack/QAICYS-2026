@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Dashboard | QAICYS 2026</title>
+    <link rel="stylesheet" href="{% static 'dashboard/dashboard.css' %}">
+</head>
+<body>
+<main class="dashboard-page">
+    <header class="dashboard-nav">
+        <div>
+            <span class="manager-eyebrow">QAICYS 2026</span>
+            <h1>REGISTRATION DASHBOARD</h1>
+        </div>
+        <form method="post" action="{% url 'dashboard:logout' %}">
+            {% csrf_token %}
+            <button class="logout-button" type="submit">LOGOUT</button>
+        </form>
+    </header>
+
+    <section class="dashboard-layout">
+        <aside class="event-sidebar">
+            <h2>EVENTS</h2>
+            <div id="eventList" class="event-list" aria-live="polite"></div>
+        </aside>
+
+        <section class="registration-panel">
+            <div class="registration-toolbar">
+                <div>
+                    <p class="manager-eyebrow">SELECTED EVENT</p>
+                    <h2 id="selectedEvent">Choose an event</h2>
+                    <p id="registrationCount" class="registration-count"></p>
+                </div>
+                <div class="registration-actions">
+                    <label class="dashboard-search">
+                        <span>SEARCH</span>
+                        <input id="dashboardSearch" type="search" placeholder="Name or register number" disabled>
+                    </label>
+                    <button id="exportRegistrations" class="export-button" type="button" disabled>
+                        EXPORT XLSX ↓
+                    </button>
+                </div>
+            </div>
+
+            <div id="dashboardMessage" class="manager-message" aria-live="polite"></div>
+            <div
+                id="registrationTable"
+                class="table-scroll"
+                tabindex="0"
+                aria-label="Registration table. Scroll horizontally to view every column."
+            ></div>
+        </section>
+    </section>
+</main>
+
+<script src="{% static 'dashboard/dashboard.js' %}"></script>
+</body>
+</html>

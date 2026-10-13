@@ -1,0 +1,1456 @@
+/* =========================================================
+   QAICYS 2026
+   EVENT PAGE
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body {
+
+    background:
+        linear-gradient(
+            rgba(2, 5, 20, 0.88),
+            rgba(2, 5, 20, 0.94)
+        ),
+        url("../assets/images/background.png");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    background-color: #020514;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+a {
+    color: inherit;
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.event-page {
+
+    width: calc(100% - 200px);
+
+    max-width: 1166px;
+
+    margin: 0 auto;
+
+    padding-top: 25px;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.event-hero {
+
+    text-align: center;
+
+    padding:
+        15px
+        0
+        34px;
+}
+
+
+.event-eyebrow {
+
+    margin: 0 0 10px;
+
+    color: #00eaff;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 4px;
+}
+
+
+.event-hero h1 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 48px;
+
+    line-height: 1;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+.event-subtitle {
+
+    margin: 10px 0 0;
+
+    color: #8190b6;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.8px;
+}
+
+
+/* =========================================================
+   MAIN GRID
+
+   LEFT  = RULES
+   RIGHT = DETAILS
+========================================================= */
+
+.main-event-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        335px;
+
+    gap: 32px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   RULES PANEL
+========================================================= */
+
+.rules-panel {
+
+    min-width: 0;
+
+    border-top:
+        1px solid
+        rgba(
+            0,
+            225,
+            255,
+            0.55
+        );
+
+    border-left:
+        1px solid
+        rgba(
+            0,
+            225,
+            255,
+            0.55
+        );
+
+    border-right:
+        1px solid
+        rgba(
+            0,
+            225,
+            255,
+            0.08
+        );
+
+    border-bottom:
+        1px solid
+        rgba(
+            0,
+            225,
+            255,
+            0.08
+        );
+
+    background:
+        rgba(
+            4,
+            10,
+            29,
+            0.78
+        );
+}
+
+
+.section-heading {
+
+    min-height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding:
+        0
+        22px;
+
+    font-size: 17px;
+
+    font-weight: 900;
+
+    letter-spacing: 0.6px;
+
+    text-transform: uppercase;
+}
+
+
+.section-heading.cyan {
+
+    color: #00eaff;
+
+    border-bottom:
+        1px solid
+        rgba(
+            0,
+            225,
+            255,
+            0.18
+        );
+}
+
+
+.section-heading.purple {
+
+    color: #bd50ff;
+
+    border-bottom:
+        1px solid
+        rgba(
+            190,
+            70,
+            255,
+            0.20
+        );
+}
+
+
+.heading-icon {
+
+    font-size: 16px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   RULES
+========================================================= */
+
+.rules-list {
+
+    padding:
+        12px
+        0;
+}
+
+
+.rule-item {
+
+    min-height: 59px;
+
+    display: grid;
+
+    grid-template-columns:
+        54px
+        minmax(0, 1fr);
+
+    align-items: center;
+
+    margin:
+        0
+        10px;
+
+    border-left:
+        1px solid
+        #00eaff;
+
+    background:
+        rgba(
+            7,
+            15,
+            38,
+            0.82
+        );
+
+    transition:
+        background 0.2s ease;
+}
+
+
+.rule-item:hover {
+
+    background:
+        rgba(
+            9,
+            24,
+            53,
+            0.95
+        );
+}
+
+
+.rule-number {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #00eaff;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+
+.rule-text {
+
+    margin: 0;
+
+    padding:
+        10px
+        15px
+        10px
+        0;
+
+    color: #d4ddf5;
+
+    font-size: 10px;
+
+    line-height: 1.4;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   DETAILS PANEL
+========================================================= */
+
+.details-panel {
+
+    min-width: 0;
+
+    border:
+        1px solid
+        rgba(
+            177,
+            59,
+            255,
+            0.65
+        );
+
+    background:
+        rgba(
+            5,
+            7,
+            29,
+            0.82
+        );
+}
+
+
+.details-panel .section-heading {
+
+    min-height: 58px;
+
+    color: #c35aff;
+}
+
+
+/* =========================================================
+   DETAIL ITEMS
+
+   This gives the vertical style from screenshot.
+========================================================= */
+
+.detail-item {
+
+    min-height: 76px;
+
+    margin:
+        0
+        28px;
+
+    padding:
+        16px
+        0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    border-top:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.10
+        );
+}
+
+
+.detail-item:first-of-type {
+
+    border-top: none;
+}
+
+
+.detail-item span {
+
+    color: #00eaff;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.8px;
+}
+
+
+.detail-item strong {
+
+    color: #dce4fa;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   COORDINATORS
+
+   FULL WIDTH
+========================================================= */
+
+.coordinators-section {
+
+    width: 100%;
+
+    margin-top: 70px;
+
+    padding-top: 43px;
+
+    border-top:
+        1px solid
+        rgba(
+            0,
+            225,
+            255,
+            0.22
+        );
+}
+
+
+.coordinator-heading {
+
+    margin-bottom: 20px;
+}
+
+
+.coordinator-heading p {
+
+    margin:
+        0
+        0
+        12px;
+
+    color: #00eaff;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 4px;
+}
+
+
+.coordinator-heading h2 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 26px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   COORDINATOR CARDS
+========================================================= */
+
+.coordinator-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 18px;
+}
+
+
+.coordinator-card {
+
+    min-height: 114px;
+
+    padding:
+        26px
+        25px;
+
+    border:
+        1px solid
+        rgba(
+            0,
+            225,
+            255,
+            0.28
+        );
+
+    background:
+        rgba(
+            4,
+            10,
+            29,
+            0.82
+        );
+}
+
+
+.coordinator-label {
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #00eaff;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.8px;
+}
+
+
+.coordinator-card h3 {
+
+    margin:
+        0
+        8px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    line-height: 1.3;
+
+    font-weight: 800;
+}
+
+
+.coordinator-card a {
+
+    color: #8292bb;
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    font-weight: 500;
+}
+
+
+.coordinator-card a:hover {
+
+    color: #00eaff;
+}
+
+
+.student-person {
+
+    margin-bottom: 12px;
+}
+
+
+.student-person:last-child {
+    margin-bottom: 0;
+}
+
+
+.student-person h3 {
+
+    margin:
+        0
+        7px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 800;
+}
+
+
+.student-person .phone-number {
+
+    color: #8292bb;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.event-actions {
+
+    margin-top: 54px;
+
+    padding:
+        25px
+        0
+        30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 18px;
+
+    border-top:
+        1px solid
+        rgba(
+            0,
+            225,
+            255,
+            0.20
+        );
+}
+
+
+.explore-link,
+.register-link {
+    width: min(100%, 280px);
+    min-height: 52px;
+    padding: 13px 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: 1.4px;
+    border-radius: 6px;
+    transition: color 0.25s ease, background 0.25s ease,
+        border-color 0.25s ease, box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.explore-link {
+    color: #dce7ff;
+    background: rgba(5, 13, 39, 0.72);
+    border: 1px solid rgba(0, 234, 255, 0.55);
+}
+
+
+.register-link {
+    color: #031027;
+    background: #00eaff;
+    border: 1px solid #00eaff;
+    box-shadow: 0 0 18px rgba(0, 234, 255, 0.32);
+}
+
+
+.explore-link:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+    transform: translateY(-2px);
+}
+
+
+.register-link:hover {
+    color: #031027;
+    background: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 0 0 24px rgba(0, 234, 255, 0.52);
+    transform: translateY(-2px);
+}
+
+.register-link.registration-closed,
+.register-link.registration-closed:hover,
+.register-link.registration-closed:focus-visible {
+    border-color: #ff7abf;
+    background: linear-gradient(135deg, #7a2b78, #9d4edd);
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 0 18px rgba(157, 78, 221, 0.35);
+}
+
+.explore-link:focus-visible,
+.register-link:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.event-footer {
+
+    width: calc(100% - 200px);
+
+    max-width: 1166px;
+
+    margin: 0 auto;
+
+    padding-bottom: 24px;
+
+    text-align: center;
+}
+
+
+.footer-line {
+
+    height: 1px;
+
+    margin-bottom: 23px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(
+                0,
+                225,
+                255,
+                0.25
+            ),
+            transparent
+        );
+}
+
+
+.footer-brand {
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 4px;
+}
+
+
+.footer-brand span {
+
+    color: #00eaff;
+}
+
+
+.footer-department {
+
+    margin-top: 7px;
+
+    color: #a746ff;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.8px;
+}
+
+
+.footer-copy {
+
+    margin-top: 5px;
+
+    color: #5f6b89;
+
+    font-size: 7px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .event-page,
+    .event-footer {
+
+        width:
+            calc(100% - 70px);
+    }
+
+
+    .main-event-grid {
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            290px;
+
+        gap: 20px;
+    }
+
+
+    .section-heading {
+
+        font-size: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        background-attachment: scroll;
+    }
+
+
+    .event-page,
+    .event-footer {
+
+        width:
+            calc(100% - 30px);
+    }
+
+
+    .event-hero {
+
+        padding-bottom: 25px;
+    }
+
+
+    .event-hero h1 {
+
+        font-size: 34px;
+    }
+
+
+    /* Rules above details */
+
+    .main-event-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .section-heading {
+
+        min-height: 52px;
+
+        padding:
+            0
+            17px;
+
+        font-size: 14px;
+    }
+
+
+    .rule-item {
+
+        min-height: 54px;
+
+        grid-template-columns:
+            42px
+            minmax(0, 1fr);
+    }
+
+
+    .rule-text {
+
+        font-size: 9px;
+    }
+
+
+    .details-panel {
+
+        width: 100%;
+    }
+
+
+    .detail-item {
+
+        min-height: 70px;
+
+        margin:
+            0
+            20px;
+    }
+
+
+    /* Coordinator cards become vertical */
+
+    .coordinators-section {
+
+        margin-top: 45px;
+
+        padding-top: 32px;
+    }
+
+
+    .coordinator-heading h2 {
+
+        font-size: 21px;
+    }
+
+
+    .coordinator-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+
+    .coordinator-card {
+
+        min-height: 100px;
+
+        padding:
+            20px;
+    }
+
+
+    .event-actions {
+
+        margin-top: 38px;
+
+        padding:
+            20px
+            0
+            25px;
+    }
+
+
+    .explore-link,
+    .register-link {
+
+        font-size: 7px;
+
+        letter-spacing: 1px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .event-hero h1 {
+
+        font-size: 29px;
+    }
+
+
+    .event-eyebrow {
+
+        font-size: 7px;
+    }
+
+
+    .rule-text {
+
+        font-size: 8px;
+    }
+
+
+    .detail-item strong {
+
+        font-size: 9px;
+    }
+
+
+    .coordinator-heading h2 {
+
+        font-size: 19px;
+    }
+
+}
+
+/* =========================================================
+   QAICYS EVENT PAGE
+   FONT SIZE FIX
+   Match the readable typography of the Rule Book page
+========================================================= */
+
+/* ---------- EVENT HERO ---------- */
+
+.event-eyebrow {
+    font-size: 12px !important;
+    letter-spacing: 4px;
+}
+
+.event-hero h1 {
+    font-size: clamp(42px, 5vw, 68px) !important;
+    line-height: 1 !important;
+}
+
+.event-subtitle {
+    font-size: 16px !important;
+}
+
+
+/* =========================================================
+   MAIN PANEL HEADINGS
+========================================================= */
+
+.panel-heading {
+    font-size: 25px !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+}
+
+.heading-icon {
+    font-size: 22px !important;
+}
+
+
+/* =========================================================
+   RULES
+========================================================= */
+
+.rule-number {
+    font-size: 13px !important;
+    font-weight: 800 !important;
+}
+
+.rule-item p,
+.rule-text {
+    font-size: 15px !important;
+    line-height: 1.45 !important;
+}
+
+
+/* =========================================================
+   EVENT DETAILS
+========================================================= */
+
+.detail-label {
+    font-size: 11px !important;
+    font-weight: 800 !important;
+    letter-spacing: 2px !important;
+}
+
+.detail-box strong {
+    font-size: 14px !important;
+    line-height: 1.35 !important;
+    font-weight: 700 !important;
+}
+
+
+/* =========================================================
+   COORDINATORS
+========================================================= */
+
+.coordinator h3,
+.student-person h3 {
+    font-size: 17px !important;
+    line-height: 1.35 !important;
+    font-weight: 700 !important;
+}
+
+.coordinator a,
+.phone-number {
+    font-size: 13px !important;
+    font-weight: 700 !important;
+}
+
+.coordinator-label {
+    font-size: 11px !important;
+    font-weight: 800 !important;
+    letter-spacing: 2px !important;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.explore-link,
+.register-link {
+    font-size: 14px !important;
+    font-weight: 800 !important;
+    letter-spacing: 1.5px !important;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer-brand {
+    font-size: 15px !important;
+}
+
+.footer-department {
+    font-size: 11px !important;
+}
+
+.footer-copy {
+    font-size: 10px !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .event-eyebrow {
+        font-size: 10px !important;
+    }
+
+    .event-hero h1 {
+        font-size: 38px !important;
+    }
+
+    .event-subtitle {
+        font-size: 13px !important;
+    }
+
+    .panel-heading {
+        font-size: 20px !important;
+    }
+
+    .heading-icon {
+        font-size: 18px !important;
+    }
+
+    .rule-number {
+        font-size: 12px !important;
+    }
+
+    .rule-item p,
+    .rule-text {
+        font-size: 13px !important;
+        line-height: 1.45 !important;
+    }
+
+    .detail-label {
+        font-size: 10px !important;
+    }
+
+    .detail-box strong {
+        font-size: 13px !important;
+    }
+
+    .coordinator h3,
+    .student-person h3 {
+        font-size: 15px !important;
+    }
+
+    .coordinator a,
+    .phone-number {
+        font-size: 12px !important;
+    }
+
+    .explore-link,
+    .register-link {
+        font-size: 11px !important;
+    }
+
+    .footer-brand {
+        font-size: 13px !important;
+    }
+
+    .footer-department {
+        font-size: 10px !important;
+    }
+
+    .footer-copy {
+        font-size: 9px !important;
+    }
+}
+
+/* =========================================================
+   FINAL READABILITY OVERRIDES
+   These target the current event-page markup directly.
+========================================================= */
+
+.details-panel .section-heading {
+    min-height: 66px;
+    font-size: 18px;
+}
+
+.detail-item span {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.detail-item strong {
+    font-size: 15px;
+    line-height: 1.55;
+}
+
+.coordinator-label {
+    font-size: 13px !important;
+    line-height: 1.5;
+}
+
+.coordinator-card h3,
+.student-person h3 {
+    font-size: 20px !important;
+    line-height: 1.4 !important;
+}
+
+.coordinator-card a,
+.student-person .phone-number {
+    font-size: 16px !important;
+    line-height: 1.5;
+}
+
+@media (max-width: 650px) {
+    .details-panel .section-heading {
+        min-height: 58px;
+        font-size: 16px;
+    }
+
+    .detail-item span {
+        font-size: 11px;
+    }
+
+    .detail-item strong {
+        font-size: 14px;
+    }
+
+    .coordinator-label {
+        font-size: 11px !important;
+    }
+
+    .coordinator-card h3,
+    .student-person h3 {
+        font-size: 18px !important;
+    }
+
+    .coordinator-card a,
+    .student-person .phone-number {
+        font-size: 15px !important;
+    }
+}
+
+/* =========================================================
+   EVENT DETAILS - INCREASE READABILITY
+========================================================= */
+
+.details-panel .detail-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+.details-panel .detail-box strong {
+    font-size: 16px;
+    line-height: 1.45;
+    font-weight: 700;
+}
+
+
+/* Event details title */
+.details-panel .panel-heading {
+    font-size: 25px;
+}
+
+
+/* =========================================================
+   COORDINATORS - KEEP CONSISTENT
+========================================================= */
+
+.coordinator-panel .coordinator h3 {
+    font-size: 17px;
+}
+
+.coordinator-panel .coordinator a {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .details-panel .detail-label {
+        font-size: 10px;
+    }
+
+    .details-panel .detail-box strong {
+        font-size: 14px;
+    }
+
+    .details-panel .panel-heading {
+        font-size: 20px;
+    }
+
+}
+
+/* =========================================================
+   SITE-WIDE EVENT PAGE READABILITY
+========================================================= */
+
+.event-eyebrow,
+.coordinator-heading p { font-size: 13px !important; line-height: 1.5; }
+
+.event-subtitle { font-size: 16px !important; line-height: 1.55; }
+
+.section-heading,
+.details-panel .section-heading { font-size: 20px !important; line-height: 1.35; }
+
+.panel-heading,
+.details-panel .panel-heading { font-size: 25px !important; line-height: 1.35; }
+
+.rule-number { font-size: 14px !important; }
+.rule-item p,
+.rule-text { font-size: 16px !important; line-height: 1.65 !important; }
+
+.detail-item span,
+.details-panel .detail-label { font-size: 13px !important; line-height: 1.45; }
+
+.detail-item strong,
+.details-panel .detail-box strong { font-size: 16px !important; line-height: 1.55; }
+
+.coordinator-label { font-size: 14px !important; }
+
+.coordinator-card h3,
+.student-person h3,
+.coordinator-panel .coordinator h3 { font-size: 20px !important; }
+
+.coordinator-card a,
+.student-person .phone-number,
+.coordinator-panel .coordinator a { font-size: 16px !important; }
+
+.explore-link,
+.register-link { font-size: 16px !important; line-height: 1.4; }
+
+.footer-brand { font-size: 15px !important; }
+.footer-department { font-size: 13px !important; }
+.footer-copy { font-size: 12px !important; line-height: 1.45; }
+
+@media (max-width: 650px) {
+    .event-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .explore-link,
+    .register-link {
+        width: 100%;
+        max-width: none;
+    }
+
+    .event-eyebrow,
+    .coordinator-heading p { font-size: 12px !important; }
+
+    .event-subtitle { font-size: 14px !important; }
+
+    .section-heading,
+    .details-panel .section-heading { font-size: 18px !important; }
+
+    .panel-heading,
+    .details-panel .panel-heading { font-size: 20px !important; }
+
+    .rule-number { font-size: 13px !important; }
+    .rule-item p,
+    .rule-text { font-size: 15px !important; }
+
+    .detail-item span,
+    .details-panel .detail-label,
+    .coordinator-label { font-size: 12px !important; }
+
+    .detail-item strong,
+    .details-panel .detail-box strong,
+    .coordinator-card a,
+    .student-person .phone-number,
+    .coordinator-panel .coordinator a { font-size: 15px !important; }
+
+    .coordinator-card h3,
+    .student-person h3,
+    .coordinator-panel .coordinator h3 { font-size: 18px !important; }
+
+    .explore-link,
+    .register-link { font-size: 14px !important; }
+
+    .footer-brand { font-size: 14px !important; }
+    .footer-department,
+    .footer-copy { font-size: 12px !important; }
+}
